@@ -96,7 +96,11 @@
 #   - look at the required jobs on `main` and on an open pull request first.
 #     Once this is written, a pull request whose required job is red — or never
 #     starts — cannot be merged by anyone, administrators included. Both were
-#     green on `main` on 2026-09-09.
+#     green on `main` on 2026-09-09. On the pull request that brought this
+#     change (#1, 2026-10-11) `docker` was green and `ci` was RED: its "Start
+#     MinIO" step could not pull the image it names (access denied by the
+#     registry) — nothing to do with the change. Written in that state, this
+#     protection lets through only a pull request that makes `ci` green.
 #   - use the file from `origin/main` after a `git fetch`, not a local `main`
 #     and not another branch. Every branch and worktree cut before this change
 #     was merged carries the old file, whatever its date. The old file is the
