@@ -10,3 +10,6 @@ CONTEXT.md
 
 # Генерируется Next при сборке — форматировать бессмысленно
 apps/web/next-env.d.ts
+
+# Ответ GitHub, записанный как есть: руками и форматтером не правится
+scripts/ci/tests/fixtures
